@@ -30,7 +30,10 @@ def number_of_customers_per_state(customers):
     """
     empty_dict = {}
     for key, value in customers.items():
-        empty_dict[key] = len(value)
+        if value != None:
+            empty_dict[key] = len(value)
+        else:
+            empty_dict[key] = 0
     return empty_dict
 
 
