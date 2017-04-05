@@ -38,8 +38,14 @@ def eldest_customer_per_state(customers):
         }
     }
     """
-    # Write your code here
-    pass
+    empty_dict = {}
+    for key, value in customers.items():
+        if key != None and len(value) > 0:
+            empty_dict[key] = max(value)
+        else: 
+            empty_dict[key] = None
+    return empty_dict
+
 
 
 class EldestCustomerTestCase(unittest.TestCase):
